@@ -10,7 +10,7 @@ export const AddCategory = ({handleSubmit}) => {
 
 
     return(
-    <form onSubmit={(e) => {handleSubmit(e)}}>
+    <form onSubmit={(e) => {handleSubmit(e, inputValue)}}>
         { inputValue }
         <input
         type="text"

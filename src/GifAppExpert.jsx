@@ -10,9 +10,10 @@ export const GifExpertApp = ()=>{
     }
 
 
-    const handleSubmit = (evt) => {
+    const handleSubmit = (evt, string) => {
         evt.preventDefault();
         console.log("Event from child", evt)
+        console.log(string)
         /* add logic here */
       
     };
