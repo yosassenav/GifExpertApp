@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export const AddCategory = ({setCategories}) => {
+export const AddCategory = ({onNewCategories}) => {
 
     const [inputValue, setInputValue] = useState('');
 
@@ -11,12 +11,10 @@ export const AddCategory = ({setCategories}) => {
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
-        console.log("AddCategory Props:", setCategories);
         if (inputValue.trim().length <= 1) return;
 
-        // if(typeof onAddCategories === "function"){
-        setCategories(categories => [inputValue, ...categories])
-        // }
+        // setCategories(categories => [inputValue, ...categories])
+        onNewCategories(inputValue.trim());
         setInputValue('');
     };
 
