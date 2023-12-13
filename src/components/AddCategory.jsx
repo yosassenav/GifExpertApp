@@ -24,6 +24,7 @@ export const AddCategory = ({onNewCategories}) => {
         type="text"
         placeholder="Buscar Gifs"
         onChange={onInputChange}
+        value={inputValue}
         />
         
     </form>
