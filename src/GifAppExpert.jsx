@@ -14,6 +14,15 @@ export const GifExpertApp = ()=>{
     }
 
 
+    const handleSubmit = (evt, string) => {
+        evt.preventDefault();
+        console.log("Event from child", evt)
+        console.log(string)
+        /* add logic here */
+      
+    };
+
+
     return(
     <>
     {/**Titulo  */}
@@ -21,7 +30,9 @@ export const GifExpertApp = ()=>{
         
 
     {/**Input */}
+
     <AddCategory onNewCategories={(evt)=>onAddCategory(evt)}/>
+
     {/**Listado de Gif */}
     {/* <button onClick={onAddCategory}>Add Category</button> */}
             {

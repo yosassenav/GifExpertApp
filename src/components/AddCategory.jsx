@@ -1,13 +1,15 @@
 import { useState } from "react"
 
+
 export const AddCategory = ({onNewCategories}) => {
+
 
     const [inputValue, setInputValue] = useState('');
 
     const onInputChange = ({target}) => {
-        //console.log(event.target.value);
         setInputValue(target.value);
     }
+
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
@@ -18,15 +20,17 @@ export const AddCategory = ({onNewCategories}) => {
         setInputValue('');
     };
 
+
     return(
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={(e) => {handleSubmit(e, inputValue)}}>
+        { inputValue }
         <input
         type="text"
         placeholder="Buscar Gifs"
         onChange={onInputChange}
         value={inputValue}
         />
-        
+        <button type="submit">click</button>
     </form>
     )
 }
