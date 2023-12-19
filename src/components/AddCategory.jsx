@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useState } from "react"
 
 
@@ -34,3 +35,7 @@ export const AddCategory = ({onNewCategories}) => {
     </form>
     )
 }
+
+AddCategory.propTypes = {
+    onNewCategories: PropTypes.func,
+  };

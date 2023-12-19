@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { getGifs } from "../helpers/getGifs"
 
 
@@ -12,3 +13,7 @@ export const Gifgrid = ({category}) => {
         </>
     )
 }
+
+Gifgrid.propTypes = {
+    category: PropTypes.string.isRequired,
+  };

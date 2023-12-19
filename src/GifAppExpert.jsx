@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AddCategory } from "./components/AddCategory";
 import { Gifgrid } from "./components/GifGrid";
 
@@ -13,14 +13,6 @@ export const GifExpertApp = ()=>{
         setCategories([newCategory, ...categories])
     }
 
-
-    const handleSubmit = (evt, string) => {
-        evt.preventDefault();
-        console.log("Event from child", evt)
-        console.log(string)
-        /* add logic here */
-      
-    };
 
 
     return(
