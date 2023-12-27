@@ -31,7 +31,7 @@ export const AddCategory = ({onNewCategories}) => {
         onChange={onInputChange}
         value={inputValue}
         />
-        <button type="submit">click</button>
+        {/* <button type="submit">click</button> */}
     </form>
     )
 }
