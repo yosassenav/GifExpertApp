@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import getGifs from "../helpers/getGifs";
+import { getGifs } from '/src/helpers/getGifs.js';
 
 export const useFetchGifs = (category) => {
     const [images, setImages] = useState([]);
@@ -18,7 +18,7 @@ export const useFetchGifs = (category) => {
           });
     
         
-      }, [category]);
+      }, []);
     return {
         images,
         isLoading,
