@@ -61,3 +61,12 @@
   .card img {
     width: 100%;
   }
+
+  .delete-button {
+    background-color: #ff0000; /* Red color */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 12%;
+  }
