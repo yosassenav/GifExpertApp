@@ -22,8 +22,9 @@ export const AddCategory = ({onNewCategories}) => {
     };
 
 
+
     return(
-    <form onSubmit={(e) => {handleSubmit(e, inputValue)}}>
+        <form onSubmit={(e) => {handleSubmit(e, inputValue)}}>
         { inputValue }
         <input
         type="text"
@@ -31,8 +32,8 @@ export const AddCategory = ({onNewCategories}) => {
         onChange={onInputChange}
         value={inputValue}
         />
-        {/* <button type="submit">click</button> */}
-    </form>
+        </form>
+   
     )
 }
 
