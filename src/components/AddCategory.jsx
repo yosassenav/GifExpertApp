@@ -14,17 +14,16 @@ export const AddCategory = ({onNewCategories}) => {
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
-        if (inputValue.trim().length <= 1) return;
-
+        if (inputValue.trim().length <= 1) return; //cuando la caja de etxto viene vacia
         // setCategories(categories => [inputValue, ...categories])
-        onNewCategories(inputValue.trim());
         setInputValue('');
+        onNewCategories(inputValue.trim());
     };
 
 
 
     return(
-        <form onSubmit={(e) => {handleSubmit(e, inputValue)}}>
+        <form onSubmit={(e) => {handleSubmit(e, inputValue)}} aria-label="form">
         { inputValue }
         <input
         type="text"
