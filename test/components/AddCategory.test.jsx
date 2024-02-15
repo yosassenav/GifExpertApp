@@ -10,7 +10,7 @@ describe('Pruebas en el componente <AddCategory/>',()=>{
 
         fireEvent.change(input, {target: {value: "Saitama"}});
 
-        expect(input.value).toBe("Saitama")   // Comparamos que el value del
+        expect(input.value).toBe("Saitama");   // Comparamos que el value del
 
         // screen.debug();
     })
@@ -27,14 +27,14 @@ describe('Pruebas en el componente <AddCategory/>',()=>{
 
         fireEvent.change(input, {target: {value: inputValue}});
 
-        fireEvent.change(form);   // Al hacer submit
+        fireEvent.submit(form);
 
         // screen.debug();
 
         // expect(input.value).toBe('');
         
-        // expect(onNewCategories).toHaveBeenCalled();
-        // expect(onNewCategories).toHaveBeenCalledTimes(1);
+        expect(onNewCategories).toHaveBeenCalled();
+        expect(onNewCategories).toHaveBeenCalledTimes(1);
         expect(onNewCategories).toHaveBeenCalledWith(inputValue);
 
     });
