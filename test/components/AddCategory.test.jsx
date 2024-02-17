@@ -1,4 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react"
+import { describe, test, expect, jest } from '@jest/globals';
 import { AddCategory } from "../../src/components/AddCategory"
 
 describe('Pruebas en el componente <AddCategory/>',()=>{

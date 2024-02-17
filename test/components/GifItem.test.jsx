@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { describe, test, expect } from '@jest/globals';
 import { GifItem } from "../../src/components/GifItem";
 
 describe('Pruebas en <GifItem/>',()=>{
