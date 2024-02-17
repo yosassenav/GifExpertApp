@@ -1,4 +1,5 @@
-import { getGifs }  from '../../src/helpers/getGifs';
+import { describe, test, expect } from '@jest/globals';
+import { getGifs } from "../../src/helpers/getGifs";
 
 describe('Pruebas en getGifs()',()=>{
 
