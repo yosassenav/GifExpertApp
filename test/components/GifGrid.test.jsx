@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { describe, test, expect, jest } from '@jest/globals';
 import { Gifgrid } from "../../src/components/GifGrid";
 import { useFetchGifs } from '../../src/hooks/useFetchGifs';
-useFetchGifs;
+
 
 jest.mock( '../../src/hooks/useFetchGifs');
 
