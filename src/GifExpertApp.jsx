@@ -10,13 +10,13 @@ export const GifExpertApp = () => {
     setCategories([newCategory, ...categories]);
   }
 
-  const handleDeleteCategory = () => {
+  const handleDeleteCategory = (categoryToDelete) => {
     if (!selectedCategory) {
       console.warn("No category selected!");
     }
 
     // Filter out the selected category
-    const updatedCategories = categories.filter((category) => category !== selectedCategory);
+    const updatedCategories = categories.filter((category) => category !== categoryToDelete);
 
     // Update the state with the new list of categories
     setCategories(updatedCategories);
@@ -37,7 +37,7 @@ export const GifExpertApp = () => {
       {categories.map((category) => (
         <div key={category}>
           <Gifgrid key={category} category={category} />
-          <DeleteButton onClick={handleDeleteCategory} />
+          <DeleteButton data-testid={`deleteCategory-${category}`} onClick={()=>handleDeleteCategory(category)} />
         </div>
       ))}
 
